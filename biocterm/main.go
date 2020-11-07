@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/spf13/cobra"
 	"os/exec"
 )
 
@@ -16,6 +17,9 @@ func main() {
 		Args:   []string{goExecutable, "version"},
 		Stdout: os.Stdout,
 		Stderr: os.Stdout,
+
+		// init cobra
+
 	}
 
 	// run `go version` command
