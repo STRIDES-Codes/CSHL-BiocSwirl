@@ -1,0 +1,19 @@
+- Class: meta
+  Course: Methylation_Arrays
+  Lesson: Introduction
+  Author: Almas Khan and Denitsa Vasileva
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+#Introduction
+
+- Class: text
+  Output: Welcome to BiocSwirl - Terminal based Bioconductor Courses. 
+  This lesson will cover how to install required packages, manipulating methylation array data- 
+  including performing quality control(QC) analysis, identifying differentially methylated regions of the genome and
+  performing clustering and enrichment analysis.
+
+
+- Class: text
+  Output: Install the required software at the following link, https://github.com/lisancao/biocswirl/blob/master/biocswirl_dev/devenv_install.
