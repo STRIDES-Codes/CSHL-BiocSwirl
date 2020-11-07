@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "biocterm/cmd"
+import "biocterm_sandbox/cmd"
 
 func main() {
 	cmd.Execute()
