@@ -12,28 +12,28 @@
 - Class: cmd_question
   Output: Open a new R project and install the package Bioconductor.
   CorrectAnswer: install.packages("BiocManager")
-  AnswerTests: omnitest(install.packages("BiocManager"))
+  AnswerTests: omnitest(correctExpr ='install.packages("BiocManager")')
   Hint: Google Bioconductor 
   
 - Class: cmd_question
   # 
   Output: Open a new R project and install the package minfi.
   CorrectAnswer: BiocManager::install("minfi")
-  AnswerTests: omnitest(BiocManager::install("minfi"))
+  AnswerTests: omnitest(correctExpr ='BiocManager::install("minfi")')
   Hint: Google minfi
  
   
-- Class: text
+- Class: cmd_question
   Output: First, let's load an example of the methylation array data which is saved as an RDS file called `meth_data_samples.csv`. This dataset is a cleaned subset of data that can be found in the Gene Expression Omnibus (GEO) publicly available database (GSE39141). The dataset consists of the beta values which are estimates of methylation levels for 485,577 CpG sites from eight samples- four healthy controls and 4 Acute lymphoblastic leukemia (ALL) patients. Store it as an object named meth_data_samples.
   CorrectAnswer: meth_data_samples= readRDS("meth_data_samples.csv")
-  AnswerTests: omnitest(correctVal='meth_data_samples = readRDS("meth_data_samples.csv")')
+  AnswerTests: omnitest(correctExpr='meth_data_samples = readRDS("meth_data_samples.csv")')
   Hint: use readRDS and store it as an object named meth_data_samples
   
 
-- Class: text_question
+- Class: cmd_question
   Output: Create a density plot of the beta values 
   CorrectAnswer: minfi::densityPlot("meth_data_samples")
-  AnswerTests: omnitest(correctVal='densityPlot(meth_data_samples)')
+  AnswerTests: omnitest(correctExpr='minfi::densityPlot(meth_data_samples)')
   Hint: use minfi::densityPlot()
   
 -  Class: figure
@@ -41,10 +41,10 @@
    Figure: density_beta.png
    FigureType: new
   
-- Class: text_question
+- Class: cmd_question
   Output: A density bean plot is another way of visualizing the above data for QC. Try plotting one.
   CorrectAnswer: minfi::densityBeanPlot("meth_data_samples")
-  AnswerTests: omnitest(correctVal='densityBeanPlot(meth_data_samples)')
+  AnswerTests: omnitest(correctExpr='minfi::densityBeanPlot(meth_data_samples)')
   Hint: use minfi::densityBeanPlotPlot()
   
 - Class: figure
