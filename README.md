@@ -58,7 +58,7 @@ c. HVG and marker gene identification
 - Visualizations for high-throughput data
 
 ### Current courses available
-<p align=center><img src="https://raw.githubusercontent.com/biocswirl-dev-team/Templates/master/graphics_templates/BiocSwirl_bluegree_Hex.png" height="300" width="300"></p1>
+<p align=center><img src="https://github.com/STRIDES-Codes/CSHL-BiocSwirl/blob/main/BiocSwirl%20course%20structure.png" height="300" width="800"></p1>
 
 
 ### Further reference:
