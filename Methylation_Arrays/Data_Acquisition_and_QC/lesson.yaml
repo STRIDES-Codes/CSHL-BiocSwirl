@@ -28,7 +28,12 @@
   CorrectAnswer: meth_data_samples= readRDS("meth_data_samples.csv")
   AnswerTests: omnitest(correctExpr='meth_data_samples = readRDS("meth_data_samples.csv")')
   Hint: use readRDS and store it as an object named meth_data_samples
-  
+
+- Class: cmd_question
+  Output: Let's convert this data into a matrix so that we can use it for further minfi analysis.
+  CorrectAnswer: meth_data_samples= as.matrix(meth_data_samples)
+  AnswerTests: omnitest(correctExpr='meth_data_samples= as.matrix(meth_data_samples)')
+  Hint: use as.matrix and store it as an object named meth_data_samples  
 
 - Class: cmd_question
   Output: Create a density plot of the beta values 
