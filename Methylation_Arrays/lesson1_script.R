@@ -6,16 +6,19 @@ library(here)
 data<- readRDS("meth_data_samples.csv")
 # Turning the data into a matrix
 matrix_data<-as.matrix((data))
+png("density_beta.png")
 # Density Plot
-density_beta <- minfi::densityPlot(matrix_data)
+beta_density <- minfi::densityPlot(matrix_data)
 
 ## save density plot 
-png("density_beta.png",density_beta)
+
+dev.off()
 
 
 # Bean plot
 # save bean plot
-bean_plot <- minfi::densityBeanPlot(matrix_data)
-png("bean_plot_beta.png",bean_plot)
+png("bean_plot_beta.png")
+ bean_plot <- minfi::densityBeanPlot(matrix_data)
 
+dev.off()
 

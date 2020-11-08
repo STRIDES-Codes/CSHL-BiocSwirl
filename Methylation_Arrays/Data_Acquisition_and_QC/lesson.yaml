@@ -39,7 +39,7 @@
   
  - Class: figure
   Output: This figure shows the average beta value densities of the different samples. A beta value falls between 0 and 1 with most density on extreme ends. Higher quality samples should have a plot with samples of similar beta values and higher density on the extreme ends. 
-  Figure: 
+  Figure: density_beta.png
   FigureType: new
   
 - Class: text_question
@@ -50,7 +50,7 @@
   
 - - Class: figure
   Output: This figure shows the average beta value densities of the different samples using a Bean plot. Most densities should be in the extreme (larger bean shapes on the extrema).
-  Figure: 
+  Figure: bean_plot_beta.png
   FigureType: new
 
 
