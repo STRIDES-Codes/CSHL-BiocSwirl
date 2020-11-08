@@ -7,26 +7,25 @@
   Version: 2.4.5
   
 - Class: text
-  Output: Before we start working with the data, we need to install the following packages:
-  Bioconductor and minfi.
+  Output: Before we start working with the data, we need to install the following packages:Bioconductor and minfi.
 
 - Class: cmd_question
-  # 
-  Output: Open a new R project and install the packages: Bioconductor and minfi
+  Output: Open a new R project and install the package Bioconductor.
   CorrectAnswer: install.packages("BiocManager")
-    BiocManager::install("minfi")
-  AnswerTests: omnitest(install.packages("BiocManager"),install.packages
-  ("minfi"))
-
-  Hint: Google Bioconductor and minfi
+  AnswerTests: omnitest(install.packages("BiocManager"))
+  Hint: Google Bioconductor 
+  
+- Class: cmd_question
+  # 
+  Output: Open a new R project and install the package minfi.
+  CorrectAnswer: BiocManager::install("minfi")
+  AnswerTests: omnitest(BiocManager::install("minfi"))
+  Hint: Google minfi
+ 
   
 - Class: text
-  Output:First, let's load an example of the methylation array data which is saved as an RDS file called `meth_data_samples.csv`.  
-  This dataset is a cleaned subset of data that can be found in the
-  Gene Expression Omnibus (GEO) publicly available database (GSE39141). The dataset consists of 
-  the beta values which are estimates of methylation levels for 485,577 CpG sites from eight samples- four healthy controls
-  and 4 Acute lymphoblastic leukemia (ALL) patients. Store it as an object named 'meth_data_samples'
-   CorrectAnswer:meth_data_samples = readRDS("meth_data_samples.csv")
+  Output: First, let's load an example of the methylation array data which is saved as an RDS file called `meth_data_samples.csv`. This dataset is a cleaned subset of data that can be found in the Gene Expression Omnibus (GEO) publicly available database (GSE39141). The dataset consists of the beta values which are estimates of methylation levels for 485,577 CpG sites from eight samples- four healthy controls and 4 Acute lymphoblastic leukemia (ALL) patients. Store it as an object named meth_data_samples.
+  CorrectAnswer: meth_data_samples= readRDS("meth_data_samples.csv")
   AnswerTests: omnitest(correctVal='meth_data_samples = readRDS("meth_data_samples.csv")')
   Hint: use readRDS and store it as an object named meth_data_samples
   
@@ -37,10 +36,10 @@
   AnswerTests: omnitest(correctVal='densityPlot(meth_data_samples)')
   Hint: use minfi::densityPlot()
   
- - Class: figure
-  Output: This figure shows the average beta value densities of the different samples. A beta value falls between 0 and 1 with most density on extreme ends. Higher quality samples should have a plot with samples of similar beta values and higher density on the extreme ends. 
-  Figure: density_beta.png
-  FigureType: new
+-  Class: figure
+   Output: This figure shows the average beta value densities of the different samples. A beta value falls between 0 and 1 with most density on extreme ends. Higher quality samples should have a plot with samples of similar beta values and higher density on the extreme ends. 
+   Figure: density_beta.png
+   FigureType: new
   
 - Class: text_question
   Output: A density bean plot is another way of visualizing the above data for QC. Try plotting one.
@@ -48,7 +47,7 @@
   AnswerTests: omnitest(correctVal='densityBeanPlot(meth_data_samples)')
   Hint: use minfi::densityBeanPlotPlot()
   
-- - Class: figure
+- Class: figure
   Output: This figure shows the average beta value densities of the different samples using a Bean plot. Most densities should be in the extreme (larger bean shapes on the extrema).
   Figure: bean_plot_beta.png
   FigureType: new
