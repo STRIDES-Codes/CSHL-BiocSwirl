@@ -37,25 +37,22 @@
 
 - Class: cmd_question
   Output: Create a density plot of the beta values 
-  CorrectAnswer: minfi::densityPlot("meth_data_samples")
+  CorrectAnswer: minfi::densityPlot(meth_data_samples)
   AnswerTests: omnitest(correctExpr='minfi::densityPlot(meth_data_samples)')
   Hint: use minfi::densityPlot()
   
--  Class: figure
+-  Class: text
    Output: This figure shows the average beta value densities of the different samples. A beta value falls between 0 and 1 with most density on extreme ends. Higher quality samples should have a plot with samples of similar beta values and higher density on the extreme ends. 
-   Figure: density_beta.png
-   FigureType: new
+  
   
 - Class: cmd_question
   Output: A density bean plot is another way of visualizing the above data for QC. Try plotting one.
-  CorrectAnswer: minfi::densityBeanPlot("meth_data_samples")
+  CorrectAnswer: minfi::densityBeanPlot(meth_data_samples)
   AnswerTests: omnitest(correctExpr='minfi::densityBeanPlot(meth_data_samples)')
   Hint: use minfi::densityBeanPlotPlot()
   
-- Class: figure
+- Class: text
   Output: This figure shows the average beta value densities of the different samples using a Bean plot. Most densities should be in the extreme (larger bean shapes on the extrema).
-  Figure: bean_plot_beta.png
-  FigureType: new
 
 
 
