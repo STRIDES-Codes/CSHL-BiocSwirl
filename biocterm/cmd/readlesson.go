@@ -58,11 +58,11 @@ var readlessonCmd = &cobra.Command{
 		fmt.Println("Attempting to read in lesson")
 
 		var fileName string
-		flag.StringVar(&fileName, "f", "", "YAML file to use")
+		flag.StringVar(&fileName, "-f", "", "YAML file to use")
 		flag.Parse()
 
 		if fileName == "" {
-			fmt.Println("Specify the lesson.yaml to using the -f option")
+			fmt.Println("Specify the lesson.yaml")
 			return
 		}
 
@@ -93,7 +93,7 @@ func init() {
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	readlessonCmd.PersistentFlags().String("file", "f", "lesson.yaml file to be read in")
+	readlessonCmd.Flags().String("file", "f", "lesson.yaml file to be read in")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
