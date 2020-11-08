@@ -164,7 +164,7 @@
   Hint: Try typing rnorm(1,10)
   
 - Class: cmd_question
-  Output: "It's important to realize that the order matters. For example, if you swap the two arguments, you get 10 random values from a normal distribution centred at a mean of 1. Notice that you don't get an error. When code technically works but doesn't do what you want it to do is called a logical error. These are the most pernicious of errors because they can pass undetected. Fortunately, it's easy here to see that we're getting nine more numbers than expected. Try it out!
+  Output: "It's important to realize that the order matters. For example, if you swap the two arguments, you get 10 random values from a normal distribution centred at a mean of 1. Notice that you don't get an error. When code technically works but doesn't do what you want it to do is called a logical error. These are the most pernicious of errors because they can pass undetected. Fortunately, it's easy here to see that we're getting nine more numbers than expected. Try it out!"
   CorrectAnswer: rnorm(10,1)
   AnswerTests: omnitest(correctExpr='rnorm(10,1)')
   Hint: Try typing rnorm(10,1)
@@ -174,6 +174,163 @@
   CorrectAnswer: rnorm(mean=10, n=1)
   AnswerTests: any_of_exprs('rnorm(mean=10,n=1)','rnorm(n=1,mean=10)')
   Hint: Try typing rnorm(mean = 10, n = 1)
+  
+- Class: text
+  Output: "Other examples of functions that take in more than one argument are the arithmetic operators you've been using. In fact, they're functions in disguise. You want proof? If you wrap the operator with backticks (` `), you can use them as if they were a function name. Like so: `+`(4, 7) "
+
+- Class: text
+  Output: "On Canadian/American English keyboards, you can find the backtick to the left of the `1` key. Needless to say, this inconvenient notation is never used in practice."
+  
+- Class: text
+  Output: "Now, you might be wondering how you could possibly remember all of these function arguments and their order (or their names). A really useful feature of R is that you can open the help page (also called a manual) for any function by running `?` followed by the function name. In this case, you don't include the parentheses because you don't want to run the function. If you do this in RStudio, it will open the function help page in the Help pane, where the Files are usually located."
+  
+- Class: cmd_question
+  Output: "Let's try it. Try typing '?sin'"
+  CorrectAnswer: ?sin
+  AnswerTests: omnitest(correctExpr='?sin')
+  Hint: Try typing '?sin'
+  
+- Class: text
+  Output: "These help pages can be esoteric and hard to read. Don't panic. You will get used to them over time. There are a few common sections: Title, Description, Usage, Arguments, Details, Value, and Examples. Generally, these manuals are useful to learn about function arguments and to see working examples in action. If the function help page isn't enough, you can always use Google to find more information online. **Pro tip:** You can also open the manual for operators like `+` using backticks."
+  
+- Class: text
+  Output: Logical Comparisons!
+  
+- Class: text
+  Output: "In addition to arithmetic operations, you can perform the following logical comparisons:"
+  
+- Class: text
+  Output: "`==`: Is equal to (note the double equal sign)"
+  
+- Class: text
+  Output: "`!=`:  Is unequal to"
+  
+- Class: text
+  Output: "`>` and `>=`: Is greater than (or equal to)"
+  
+- Class: text
+  Output: "`<` and `<=`: Is lesser than (or equal to)"
+  
+- Class: text
+  Output: "These operators are most commonly used to compare numbers. The output of these operations can be one of two values: `TRUE` or `FALSE`. In other programming languages, these are called boolean values. In R, they are referred to as logical values."
+  
+- Class: cmd_question
+  Output: Try typing '1 == 1' to see what the output looks like
+  CorrectAnswer: 1 == 1
+  AnswerTests: omnitest(correctExpr='1 == 1')
+  Hint: Try typing 1 == 1
+
+- Class: cmd_question
+  Output: Try typing 2 > 5 next!
+  CorrectAnswer: 2 > 5
+  AnswerTests: omnitest(correctExpr='2 > 5')
+  Hint: Try typing 2 > 5
+
+- Class: text
+  Output: "One important aspect of numeric comparisons in R (and any programming language, for that matter) is that you need to take special caution when comparison decimal numbers (also known as floating point numbers or doubles). Case in point, you can compare if two infinitesimal numbers are equal to zero:"
+  
+- Class: cmd_question
+  Output: Try typing '1e-324 == 0'
+  CorrectAnswer: 1e-324 == 0
+  AnswerTests: omnitest(correctExpr='1e-324 == 0')
+  Hint: Try typing 1e-324 == 0
+  
+- Class: text
+  Output: "Because computers represents everything as zeros and ones, two decimal numbers that look the same (and should be the same) might not be considered the same when using the `==` operator. For more technical details, you should check out the [Floating Point Guide](http://floating-point-gui.de/). The workaround is to use the `all.equal()` function, which will tolerate tiny differences when comparing floating point numbers."
+  
+- Class: cmd_question
+  Output: Try using the function all.equal() to compare 1e-324 and 0
+  CorrectAnswer: all.equal(1e-324, 0)
+  AnswerTests: omnitest(correctExpr='all.equal(1e-324, 0)')
+  Hint: Try typing all.equal(1e-324, 0)
+  
+- Class: text
+  Output: Storing Values in Variables!
+  
+- Class: text
+  Output: "Rarely will you need to open R and perform one operation. In virtually every situation, you will need to perform a series of operations, each building on top of previous ones. To simplify the re-use of values, programming languages offer the ability to define variables. A variable can store a value, also known as an object, for later retrieval. You can retrieve the contents of a variable by referring to its name."
+  
+- Class: text
+  Output: "Look at this expression: `x <- 3 * 7`."
+  
+- Class: text
+  Output: "Here, we're calculating the product of 3 and 7 first, and then storing the result of this calculation in a variable called `x`. Notice that unlike our operations from above, there is no output. That's because the output was 'captured' and stored in the variable. The `<-` operator is known as the assignment operator, because you assign a value to a variable." 
+
+- Class: cmd_question
+  Output: Try it yourself! Try typing x <- 3 * 7
+  CorrectAnswer: x <- 3 * 7
+  AnswerTests: omnitest(correctExpr=' x <- 3 * 7')
+  Hint: Try typing  x <- 3 * 7
+  
+- Class: text
+  Output: "Here, the name `x` is arbitrary. Variable names can be anything as long as certain rules are met, which are listed below. Note that the last bullet point is a matter of personal taste. Whatever you choose, **consistency** is what matters most, and you are encouraged to use more descriptive variable names because it helps make code more readable."
+  
+- Class: text
+  Output: "They can contain letters, numbers, underscores and periods, but no spaces."
+  
+- Class: text
+  Output: "They must start with a letter or a period followed by a letter. "
+  
+- Class: text
+  Output: "They cannot start with a number nor an underscore. "
+  
+- Class: text
+  Output: "Variables beginning with a period are hidden variables. "
+  
+- Class: text
+  Output: "Different people use different conventions for long variable names, including `periods.between.words`, `underscores_between_words`, or `camelCaseToSeparateWords`."
+  
+- Class: cmd_question
+  Output: "Now, back to the variable `x`. If we wanted to see the contents of the variable `x`, we simply refer to it by name. Try typing x"
+  CorrectAnswer: x
+  AnswerTests: omnitest(correctExpr='x')
+  Hint: x
+  
+- Class: text
+  Output: "If you run into an `Error: object 'x' not found` error, that means you never defined the variable `x`. Here, 'define' refers to the act of storing/assigning a value to `x`. In this case, make sure to run the `x <- 3 * 7` line of R code above."
+  
+- Class: text
+  Output: "The utility of variables comes from the ability to use them in other operations. For instance, we can calculate the natural logarithm of the value stored in `x`. Alternatively, we can store that new value in another variable called `y`."
+  
+- Class: cmd_question
+  Output: Try it out!
+  CorrectAnswer: y <- log(x)
+  AnswerTests: omnitest(correctExpr='y <- log(x)')
+  Hint: try typing y <- log(x)
+  
+- Class: text
+  Output: "As we define these variables, you will notice that new entries appear in the Environment pane in RStudio, each corresponding to a variable. This is a convenient way of keeping track of all existing variables. Unless you are storing large amounts of data in variables, there is practically no limit on the number of variables you can create."
+  
+- Class: text
+  Output: "Case in point, the value stored in `y` was calculated from the natural logarithm of the value stored in `x`."
+  
+- Class: cmd_question
+  Output: Let's recall x
+  CorrectAnswer: x
+  AnswerTests: omnitest(correctExpr = 'x')
+  Hint: Type x
+  
+- Class: cmd_question
+  Output: Let's recall y
+  CorrectAnswer: y
+  AnswerTests: omnitest(correctExpr = 'y')
+  Hint: Type y
+  
+- Class: cmd_question
+  Output: "If we update `x` to another value, you can see that the value of `y` remains unchanged. This is also reflected in the Environment pane. If you want to update the value of `y`, you would need to re-run the calculation from earlier. Try executing 'x <- 1 / 40'"
+  CorrectAnswer: x <- 1 / 40
+  AnswerTests: omnitest(correctExpr='x <- 1 / 40')
+  Hint: x <- 1 / 40
+  
+- Class: cmd_question
+  Output: Now, let's recall x again
+  CorrectAnswer: x
+  AnswerTests: omnitest(correctExpr='x')
+  Hint: Type x
+  
+
+
+  
   
 
 
