@@ -1,0 +1,54 @@
+- Class: meta
+  Course: GWAS using GAPIT
+  Lesson: outputs
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+- Class: text
+  Output: 
+    Outputs
+
+    Phenotype diagnosis
+    scatter plot
+    histogram
+    box plot
+    accumulative distribution
+    
+    Marker density
+    
+    Linkage Disequilibrium Decade
+    
+    Heterozygosis
+    
+    Principal Component (PC) plot
+    
+    Kinship plot
+    
+    Neighbor-Joining (NJ)-tree
+    
+    QQ-plot
+    
+    Manhattan Plot
+    
+    Compression Profile
+    
+    The Optimum Compression
+    
+    Model Selection Results
+    
+    Multiple traits or methods
+    
+    Genomic Prediction
+    
+    Distribution of BLUPs and their PEV
+    
+    Interactive plot
+    
+    
+    Tables
+    Association Table
+    Allelic Effects Table
+
+    

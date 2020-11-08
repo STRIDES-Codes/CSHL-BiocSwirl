@@ -1,0 +1,36 @@
+- Class: meta
+  Course: GWAS using GAPIT
+  Lesson: Data
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+  
+- Class: text
+  Output: Types of input data Phenotypic Data & Genotypic Data & Types of Output Manhattan plots
+  
+- Class: text
+  Output: Phenotype data looks like 
+
+- Class: text
+  Output: Genotype data can be in many formats like genotype data in hapmap format; genotype data in numerical format; genotype map; kinship; covariate variables 
+
+- Class: text
+  Output: We will use hapmap format where the SNP information (chromosome and position) and genotype of each taxa to be stored in one file. 
+  
+- Class: text
+  Output: SNP name , the chrom column and the pos are used
+
+- Class: text
+  Output: 
+    analysis
+    General Linear Model (GLM)
+    Mixed Linear Model (MLM)
+    Compressed MLM (CMLM)
+    Enriched CMLM (ECMLM)
+    Settlement of MLM Under Progressively Exclusive Relationship (SUPER)
+    Fixed and random model Circulating Probability Unification (FarmCPU)
+    Bayesian-information and Linkagedisequilibrium Iteratively Nested Keyway (BLINK)
+    We would not explain these models one can get inference from which they find suitable, anyhow litrature suggests BLINK > FarmCPU> MLMM > SUPER > ECMLM > CMLM > MLM > GLM.
+
+

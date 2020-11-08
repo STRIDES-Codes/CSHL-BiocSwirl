@@ -1,0 +1,22 @@
+- Class: meta
+  Course: GWAS using GAPIT
+  Lesson: Getting the data & required packages
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+- Class: text
+  Output: install Packages Biobase, BiocGenerics, BiocManager, curl & RCurl
+
+- Class: cmd_question
+  Output: download this file http://zzlab.net/GAPIT/GAPIT_Tutorial_Data.zip
+  CorrectAnswer: download.file(url = "http://zzlab.net/GAPIT/GAPIT_Tutorial_Data.zip", destfile="GAPIT_Tutorial_Data.zip")
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: download.file(url = "http://zzlab.net/GAPIT/GAPIT_Tutorial_Data.zip", destfile="GAPIT_Tutorial_Data.zip")
+
+- Class: cmd_question
+  Output: unzip the downloaded file GAPIT_Tutorial_Data.zip
+  CorrectAnswer: unzip("GAPIT_Tutorial_Data.zip")
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: unzip("GAPIT_Tutorial_Data.zip")

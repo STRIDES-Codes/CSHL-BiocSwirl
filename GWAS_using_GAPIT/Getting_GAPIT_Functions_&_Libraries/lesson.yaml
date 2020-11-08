@@ -1,0 +1,25 @@
+- Class: meta
+  Course: GWAS using GAPIT
+  Lesson: Getting GAPIT Functions & Libraries
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+- Class: cmd_question
+  Output: read this code http://zzlab.net/GAPIT/GAPIT.library.R
+  CorrectAnswer: source("http://zzlab.net/GAPIT/GAPIT.library.R")
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: source("http://zzlab.net/GAPIT/GAPIT.library.R")
+
+- Class: cmd_question
+  Output: read this function http://zzlab.net/GAPIT/gapit_functions.txt
+  CorrectAnswer: source("http://zzlab.net/GAPIT/gapit_functions.txt")
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: source("http://zzlab.net/GAPIT/gapit_functions.txt")
+
+- Class: cmd_question
+  Output: read this function http://www.zzlab.net/GAPIT/emma.txt for using Efficient Mixed-Model Association
+  CorrectAnswer: source("http://www.zzlab.net/GAPIT/emma.txt")
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: source("http://www.zzlab.net/GAPIT/emma.txt")

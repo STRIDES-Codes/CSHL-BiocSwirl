@@ -1,0 +1,11 @@
+- Class: meta
+  Course: GWAS using GAPIT
+  Lesson: Calling the Packages
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+       
+
+- Class: text
+  Output: Install & include multtest, gplots, LDheatmap, genetics, MASS, compiler, RColorBrewer, scatterplot3d

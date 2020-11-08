@@ -1,0 +1,31 @@
+- Class: meta
+  Course: GWAS using GAPIT
+  Lesson: Reading files & Calling GAPIT
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+- Class: cmd_question
+  Output: set the working directory to the unziped file
+  CorrectAnswer: setwd("./GWAS_GAPIT/GAPIT_Tutorial_Data")
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: setwd("./GWAS_GAPIT/GAPIT_Tutorial_Data")
+
+- Class: cmd_question
+  Output: read the phenotypic data from file mdp_traits.txt & assign to variable myY
+  CorrectAnswer: myY <- read.table("mdp_traits.txt", head = TRUE)
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: myY <- read.table("mdp_traits.txt", head = TRUE)
+
+- Class: cmd_question
+  Output: read the hapmap data from file mdp_genotype_test.hmp.txt & assign to variable myG
+  CorrectAnswer: myG <- read.table("mdp_genotype_test.hmp.txt", head = FALSE)
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: myG <- read.table("mdp_genotype_test.hmp.txt", head = FALSE)
+
+- Class: cmd_question
+  Output: Use GAPIT on these variables & assign to variable myGAPIT , relax for a while
+  CorrectAnswer: myGAPIT <- GAPIT( Y=myY,G=myG,PCA.total=3 )
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: myGAPIT <- GAPIT( Y=myY,G=myG,PCA.total=3 )

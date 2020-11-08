@@ -1,0 +1,20 @@
+- Class: meta
+  Course: GWAS using GAPIT
+  Lesson: Introduction
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+- Class: text
+  Output: This lesson is an introduction to GWAS & GAPIT
+
+- Class: text
+  Output: Genome-wide association study (GWAS) is an approach used in genetics to associate genome-wide set of genetic variants (SNPs) in different individuals with the observed phenotype. If one type of the variant is more frequent in members of the population with the observed trait, the variant is said to be associated with that trait.
+
+- Class: text
+  Output: GAPIT is Genomic Association and Prediction Integrated Tool (http://www.zzlab.net/GAPIT/)
+
+- Class: text
+  Output: It produces the distribution of marker density and decay of linkage equilibrium to inform user if the markers are dense enough.
+
