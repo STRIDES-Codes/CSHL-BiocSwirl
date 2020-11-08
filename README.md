@@ -75,6 +75,6 @@ We are always looking for pull requests and active contributers, if you are inte
 | Lisa N. Cao | lisancao | User Environment & Interface Development |
 | Julia Philipp | JuliaPhilipp | Manuscript & Couse Development |
 | Almas Khan | almas2019 | Course Development |
-| Denitsa | | Course Development |
+| Denitsa Vasileva | deni678 | Course Development |
 | Jasdeep Singh | | Course Development |
 
